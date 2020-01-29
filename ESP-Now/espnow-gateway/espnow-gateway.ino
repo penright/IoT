@@ -22,14 +22,16 @@
 
  Ant Elder
  License: Apache License v2
+ MAC: C8:2B:96:08:2E:0A
+
 */
 #include <ESP8266WiFi.h>
 extern "C" {
   #include <espnow.h>
 }
 
-const char* ssid = "BTHub5-72W5";
-const char* password = "xxxxxxxxxx";
+const char* ssid ="IGH Connect";
+const char* password = "";
 
 #define WIFI_CHANNEL 1
 
@@ -44,8 +46,8 @@ struct SENSOR_DATA {
 void setup() {
   Serial.begin(115200); Serial.println();
 
-  initWifi();
-
+//  initWifi();
+//
   if (esp_now_init()!=0) {
     Serial.println("*** ESP_Now init failed");
     ESP.restart();
@@ -102,4 +104,3 @@ void initWifi() {
 
   Serial.print("WiFi connected, IP address: "); Serial.println(WiFi.localIP());
 }
-

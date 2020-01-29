@@ -22,6 +22,8 @@
 
  Ant Elder
  License: Apache License v2
+ MAC: C8:2B:96:08:2C:67
+
 */
 #include <ESP8266WiFi.h>
 extern "C" {
@@ -29,7 +31,7 @@ extern "C" {
 }
 
 // this is the MAC Address of the remote ESP which this ESP sends its data too
-uint8_t remoteMac[] = {0x5C, 0xCF, 0x7F, 0x5, 0xFD, 0xF0};
+uint8_t remoteMac[] = {0xC8, 0x2B, 0x96, 0x8, 0x2E, 0xA};
 
 #define WIFI_CHANNEL 1
 #define SLEEP_TIME 15e6
@@ -92,4 +94,3 @@ void sendReading() {
     memcpy(bs, &sd, sizeof(sd));
     esp_now_send(NULL, bs, sizeof(bs)); // NULL means send to all peers
 }
-
