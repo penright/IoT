@@ -30,8 +30,8 @@ extern "C" {
   #include <espnow.h>
 }
 
-const char* ssid ="IGH Connect";
-const char* password = "";
+const char* ssid ="Blue";
+const char* password = "@m3rica";
 
 #define WIFI_CHANNEL 1
 
